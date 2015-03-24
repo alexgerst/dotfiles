@@ -21,7 +21,9 @@ set nocompatible
 filetype indent plugin on
 
 " Enable syntax highlighting
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
 
 
 "------------------------------------------------------------
