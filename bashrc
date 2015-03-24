@@ -20,6 +20,11 @@ white='\[\e[1;37m\]'
 # Configure prompt
 export PS1="\n${nc}\342\224\214(${lcyan}\u${nc})\342\224\200(${lred}\H${nc})\342\224\200(${yellow}\t \d${nc})\n\342\224\224(${lpurple}\w${nc})\342\224\200(${lgreen}$(ls -1 | wc -l | sed 's: ::g') files, $(ls -lah | grep -m 1 total | sed 's/total //')b${nc})\342\224\200> "
 
+
+# Configure standard editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Configure aliases
 alias ls='ls --color=auto'
 alias lsx='ls -al --color=auto'
