@@ -30,12 +30,10 @@ alias ls='ls --color=auto'
 alias lsx='ls -al --color=auto'
 alias pls='sudo "$BASH" -c "$(history -p !!)"'
 alias grep='grep --color=auto'
+alias latvia='curl http://www.reddit.com/r/latvianjokes/hot/.json?limit=1 2>/dev/null | grep -Po "\"selftext\": \"\K(.*?)[^\\\]\"," | sed "s/.\{2\}$//" | sed "s@\\\\@@g" | tail -n1 | fold -sw 70'
 
 # Welcome message
 echo -e "\nWelcome to BASH!\n"
-
-# Get text of top post on /r/LatvianJokes
-# curl http://www.reddit.com/r/latvianjokes/hot/.json?limit=1 2>/dev/null | grep -Po '"selftext": "\K(.*?)[^\\]",' | sed 's/.\{2\}$/'/ | sed 's@\\@@g' | tail -n1 | fold -sw 70
 
 # Print out a joke
 fortune riddles
