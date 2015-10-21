@@ -29,9 +29,16 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Configure aliases
+aur() {
+    git clone https://aur.archlinux.org/$1.git
+    cd $1
+    makepkg -sri --noconfirm
+    cd ..
+}
 multikill() {
     kill -9 `ps -ef | grep $1 | grep -v grep | awk '{print $2}'`
 }
+alias aur=aur
 alias multikill=multikill
 alias ls='ls --color=auto'
 alias lsx='ls -al --color=auto'
